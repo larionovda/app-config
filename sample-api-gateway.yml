@@ -13,12 +13,12 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: employees-api
+          id: employees-api
           uri: http://localhost:9092/
           predicates:
-            - Path=/employees/**
-        - id: workspace-api
-            uri: http://localhost:9091/
-            predicates:
-              - Path=/workspaces/**
+            Path=/employees/**
+          id: workspace-api
+          uri: http://localhost:9091/
+          predicates:
+             Path=/workspaces/**
 
